@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="../assets/fonts/css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="../assets/fonts/svg-with-js/css/fa-svg-with-js.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Nearby</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel='stylesheet prefetch' href='../assets/css/materialize.min.css'>
+    <link rel="stylesheet" href="../assets/css/bottom_tabs.css">
+    <link sizes="192x192" rel="icon" href="../assets/images/nearbyicon.png" />
+<style>
+	html, body{
+		height: 100% !important;
+	}
+	header, main, footer {
+      padding-left: 300px;
+    }
+
+    @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+	.tabs .indicator {
+		display:none;
+	}
+	.tabs {
+		box-shadow: -3px -3px 5px grey !important;
+	}
+	.tabs-content{
+		height: 600px !important;
+	}
+	.carousel-item{
+		height: 600px !important; 
+	}
+	.tabs-content.carousel .carousel-item{
+		height: 600px !important; 
+	}
+	
+	.tabs .tab a.active {
+		border-bottom: 2px solid blue; color: blue;
+	}
+	
+	div #test1{
+		height: 600px !important;
+	}
+    
+	div #test2{
+		height: 600px !important;
+	}
+    
+	div #test3{
+		height: 600px !important;
+	}
+	.jobtitle{
+		font-size: 20px !important;
+	}
+	@keyframes swipe-left {
+    to {
+        transform: rotate(-13deg) translate3d(-100%, 0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes swipe-right {
+    to {
+        transform: rotate(13deg) translate3d(100%, 0, 0);
+        opacity: 0;
+    }
+}
+@keyframes add-to-contact {
+    to {
+        transform: rotate(0deg) translate3d(100%, 0, 0);
+        opacity: 0;
+    }
+}
+.swipe-left {
+    animation: swipe-left 0.5s forwards;
+}
+
+.swipe-right {
+    animation: swipe-right 0.5s forwards;
+}
+
+	.add-to-contact {
+		animation: add-to-contact 0.5s forwards;
+		
+	}	
+	
+    
+	</style>
+<script> 
+	
+	function switchprofile(){
+			var mode= $('#mode').val();
+		
+			if (mode == "one"){
+			$('#mode').val('two');
+			$('#switch').attr('src','../assets/images/nearbyiconalt.png');
+			$('#navswitch').attr('src','../assets/images/26.jpg');
+			$('#headerswitch').attr('src','../assets/images/nearbyalt.png');
+			$('#hswitch').addClass('blue-grey darken-4').removeClass('white');
+			$('#test1').addClass('red lighten-2').removeClass('blue');
+			$('#test2').addClass('red lighten-2').removeClass('blue');
+			$('#test4').addClass('red lighten-2').removeClass('blue');
+			$('#mswitch').addClass('white-text lighten-2').removeClass('black-text');
+			
+			}
+			else if(mode == "two"){
+			$('#mode').val('one');
+			$('#switch').attr('src','../assets/images/nearbyicon.png');
+			$('#navswitch').attr('src','../assets/images/29.jpg');
+			$('#headerswitch').attr('src','../assets/images/nearby.png');
+			$('#hswitch').addClass('white').removeClass('blue-grey darken-4');
+			$('#test1').addClass('blue').removeClass('red lighten-2');
+			$('#test2').addClass('blue').removeClass('red lighten-2');
+			$('#test4').addClass('blue').removeClass('red lighten-2');
+			$('#mswitch').addClass('black-text ').removeClass('white-text');
+			}
+		};	
+	
+	
+	</script>
+</head>
+
+<body>
+  <header>
+   <div class="navbar-fixed">
+ 	<nav id="hswitch" class="white ">
+ 		<div>
+ 			<div class="nav-wrapper"><div class="container"><a data-activates="sidemenu" data-position="right" class="btn z-depth-0 white button-collapse show-on-small transparent">
+                <i class="left fas fa-bars black-text show-on-small" data-fa-transform="down-25 grow-5" id="mswitch"></i>
+                </a><a href="index.html" class="brand-logo"><img id="headerswitch" src="../assets/images/nearby.png" alt="" style="height: 50px; margin-top:10px; padding-bottom: 10px;"></a>
+ 			<ul class=" hide-on-med-and-down" style="padding-left: 500px;">
+        
+        <li><a href="../index.html" class="white-text btn blue waves-effect waves-light" style="border-radius: 20px;"><i class="fa fa-sign-in-alt"></i> Logout</a></li>
+				</ul></div></div>
+ 		</div>
+ 	</nav>
+	  </div></header>
+   <ul id="sidemenu" class="side-nav fixed white lighten-4">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img id="navswitch" src="../assets/images/29.jpg" style="width:600px;" alt="">
+                </div>
+                <a href="index.html"><img src="../assets/images/worklady.jpeg" class="circle" alt=""></a>
+				<a href="index.html"><span class="name white-text">Kemi Ademola &#8226; <span class="grey-text text-lighten-4"><i>Benin City</i></span></span></a>
+                <a href="index.html"><span class="email white-text">ademola.k@gmail.com</span></a>
+
+            </div>
+        </li>
+        <li>
+            <a class="active subheader">
+                <div>Find the People You Need</div>
+            </a>
+
+
+        </li>
+       <li><a class="black-text"><i class="fa fa-search-plus" data-fa-transform="grow-10"></i> &nbsp; Search</a></li>
+        
+       
+
+        <div class="divider"></div>
+        <li>
+            <a class="active subheader">
+                <div>Make New Contacts</div>
+            </a>
+
+
+        </li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">
+                        <div><i class="colortextbrand fas fa-address-card" data-fa-transform=""></i>&nbsp; &nbsp; My Contacts &nbsp; &nbsp; <i class="fa fa-caret-down"></i><span class="new badge blue pulse">4</span></div>
+                    </a>
+                    <div class="collapsible-body">
+                        <ul>
+                             <li><a class="black-text"><i class="fa fa-user-plus" data-fa-transform=""></i>&nbsp; Add Contact</a></li>
+                            
+                            <li><a class="black-text" ><i class="fab fa-whatsapp" data-fa-transform=""></i>  &nbsp; Chat <span class="new badge orange lighten-1">17</span></a></li>
+                            
+                             <li><a class="black-text" ><i class="fa fa-user-minus" data-fa-transform=""></i>&nbsp; Delete Contact</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+
+        </li>
+
+
+        <div class="divider"></div>
+        <li>
+            <a class="subheader">
+                <div>Get Started</div>
+            </a>
+        </li>
+       
+        <li><a class="black-text signup"><i class="fa fa-cogs" data-fa-transform="grow-3" ></i>&nbsp; Settings</a></li>
+        <li><a class="black-text" href="../index.html"><i class="fa fa-sign-in-alt"  data-fa-transform="grow-3"></i>&nbsp; Logout</a></li>
+        
+       
+
+    </ul>
+ 
+   <main>
+    <div class="row">
+    <div class="col s12 ">
+      <ul class="bottom_tabs tabs blue-text z-depth-2">
+        <li class="tab col s3"><a href="#test1"><i class="fa fa-user-alt"></i></a></li>
+        <li class="tab col s3"><a class="active" href="#test2"><i class="fa fa-search-plus"></i></a></li>
+        <li class="tab col s3"><a href="#test4"><i class="fab fa-whatsapp"></i></a></li>
+      </ul>
+    </div>
+    <div id="test1" class="col s12 blue center z-depth-0">
+        <div class="row pcard" style="padding-top: 10px; padding-left: 20px; padding-right: 20px;">
+            <div class="col s12 m5 l4 offset-l1">
+              <div class="card hoverable" id="profilecard">
+                <div class="card-image">
+                  <img src="../assets/images/worklady.jpeg" >
+					<span class="card-title left-align" style="font-weight: strong;"><strong>Kemi Ademola</strong><br><span class="jobtitle">Lawyer at Lekki Phase 1</span></span>
+                  <a class="btn-floating blue btn-large halfway-fab waves-effect waves-light  modal-trigger" data-target="image_update_modal" id="pro_image2"><i class="fa fa-edit fa-2x" data-fa-transform="right-2 down-3"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:0px;">
+                        
+                  <p>If you need help with any legal documentation you can contact me.<br> I also enjoy meeting new people</p><div class="chip">
+    #Lawyer
+    <i class="fa fa-times-circle"></i>
+  </div><div class="chip">
+    #corporate 
+    <i class="fa fa-times-circle"></i>
+  </div><br>
+					<div class="row center" style="padding-bottom:10px;"> <img id="switch" src="../assets/images/nearbyicon.png" class="circle" onclick="switchprofile();" style="margin-right: 10px; width:45px;"> <img src="../assets/images/nearbyprofileedit.png" class="circle" style="width:45px; margin-right:10px;" onclick="$('#profile_modal').modal('open');"> <img src="../assets/images/nearbyaddimage.png" class="circle" style="width:45px;" onclick="$('#chat_modal').modal('open');"></div>
+               <input type="hidden" id="mode" value="one">
+                </div>
+              </div>
+              
+            </div>
+            <div class="col s12 m4 l4 offset-l1">
+             
+              <div class="card-panel hoverable hide-on-med-and-down" id="profilecard" style="padding-top:2px; padding-bottom: 2px;">
+                <p class="flow-text center-align">Profile Details. </p>
+                <p class="flow-text left-align" style="margin-top:-20px;">Name: <span class="blue-text" style="font-weight: bold;">Kemi Adesida</span><br>
+                Gender: <span class="blue-text" style="font-weight:bold;">Female</span> <br> Job: <span class="blue-text" style="font-weight: bold;">Lawyer</span> <br> <strong><span class="blue-text">n</span>ear</strong>by Contacts: <span class="blue-text" style="font-weight:bold;">12</span></p>
+                <div class="row left-align">
+             
+                   <div class="chip">
+    Lawyer
+    <i class="fa fa-times-circle"></i>
+  </div> <div class="chip">
+    legal
+    <i class="fa fa-times-circle"></i>
+  </div>
+             <div class="chip">
+    art
+    <i class="fa fa-times-circle"></i>
+  </div>
+              <div class="chip">
+    Corporate
+    <i class="fa fa-times-circle"></i>
+  </div>
+              
+              
+             
+			  <a href=""><div class="chip blue white-text">
+    Add More
+    <i class="fa fa-plus-circle"></i>
+				  </div></a> 
+				  </div>
+              </div>
+				<ul class="collapsible popout">
+					 <li>
+      <div class="collapsible-header"><i class="fa fa-user-plus blue-text" data-fa-transform="down-2 left-5"></i>New Contacts<span class="new badge blue">4</span></div>
+      <div class="collapsible-body white"><span>You Have 3 new contacts. Check out Who Added you...</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="fab fa-whatsapp orange-text" data-fa-transform="down-2 left-5"></i>New Messages <span class="new badge orange">17</span></div>
+      <div class="collapsible-body white"><span>You have 17 new Messages</span></div>
+    </li>
+					
+				</ul>
+            </div>
+          </div>
+      </div>
+    <div id="test2" class="col s12 blue z-depth-0">
+           <div class="col s12 m6 l6 offset-l3 offset m3">
+                <div id="panel_search" class="card-panel" style="padding-top: 5px; padding-bottom: 5px; margin-top: 0px; display:none;">
+                   <div class="container"> 
+                    
+                            <div class="input-field">
+                               
+                                <input id="search" type="search" class="validate">
+                                <label for="search"> <i class="fa fa-search-plus"></i>&nbsp; Search Nearby</label>
+				  </div>
+                              
+                              
+                            
+                          
+              </div>
+              </div>
+              <div class="row" style="padding-top: 0px; padding-left: 20px; padding-right: 20px;">
+              <div class="col s12 m8 l10 offset-l1">
+                    <div class="card hoverable" style="display:none;" id="first_result" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/images%20(13).jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue btn-large halfway-fab add_contact waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align">
+					<span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Jessica Lawanson</strong><br><span style="font-size: 12px;">Dentist at Lagos State Teaching Hospital &#8226; <span class="grey-text">17 miles away</span></span></span> 
+                  <p>They say an apple a day, but you should never be afraid to see the Dentist :-).<br></p><p class="grey-text">likes: field trips, cooking, and outdoors.</p><div class="chip">
+    #Dentist &nbsp;
+    
+  </div><div class="chip">
+    #Consultant &nbsp;
+    
+  </div>
+<div class="chip">
+    #LUTH &nbsp;
+    
+  </div>
+               <div class="row center"> <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+               <div class="card hoverable" style="display:none;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/images%20(12).jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue btn-large halfway-fab waves-effect waves-light add_contact"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align">
+					<span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Timeyin James</strong><br><span style="font-size: 12px;">Mechanic at Obalende &#8226; <span class="grey-text">12 miles away</span></span></span> 
+                  <p>Been fixing cars since I was 12 and would be happy to help with your vehicle.<br></p><p class="grey-text">Likes: fuji, honesty, hardworking people.</p><div class="chip">
+    #mechanic &nbsp;
+    
+  </div><div class="chip">
+    #repair &nbsp;
+    
+  </div>
+<div class="chip">
+    #carsales &nbsp;
+    
+  </div>
+                <div class="row center"> <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none;">
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/images%20(19).jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue btn-large halfway-fab add_contact waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align">
+					<span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Lupita Nnyongo</strong><br><span style="font-size: 12px;">Actress at MaryLand&#8226; <span class="grey-text">21 miles away</span></span></span> 
+                  <p>Starred In Black Panther. Wakanda Forever!<br></p><p class="grey-text">Likes: Poetry, Painting, Cultural Arts.</p><div class="chip">
+    #Actress &nbsp;
+    
+  </div><div class="chip">
+    #model &nbsp;
+    
+  </div>
+<div class="chip">
+    #finearts &nbsp;
+    
+  </div><div class="row center"> <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+               <div class="card hoverable" style="display:none;">
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/doctorman.jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue btn-large halfway-fab add_contact waves-effect waves-light "><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Franklin Chucks</strong><br><span style="font-size: 12px;">Doctor at Apapa &#8226; <span class="grey-text">32 miles away</span></span></span> 
+                  <p>If symptoms persist after 3 days, consult your doctor.<br></p><p class="grey-text">Likes: movies, family, fashion.</p><div class="chip">
+    #doctor &nbsp;
+    
+  </div><div class="chip">
+    #medical &nbsp;
+    
+  </div>
+<div class="chip">
+    #ENT &nbsp;
+    
+  </div><div class="row center"> <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              
+               
+               
+               
+               <div class="card hoverable" style="display:none;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/maninsuit.jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue btn-large halfway-fab waves-effect waves-light  add_contact"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Emeka Chuks</strong><br><span style="font-size: 13px;">OAP at Cool FM Radio &#8226; <span class="grey-text">17 miles away</span></span></span> 
+                  <p>Professional MC and Talk show Host. <br></p><p class="grey-text">Likes: conversation, fashion, scifi movies.</p><div class="chip">#MC &nbsp;</div><div class="chip">
+    #radio &nbsp;</div><div class="chip">#host &nbsp;</div>
+               <div class="row center"> <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/images%20(18).jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Yemi Alade</strong><br><span style="font-size: 13px;">Photographer at Victoria Island &#8226; <span class="grey-text">32 miles away</span></span></span> 
+                  <p>Contact me if you want to take great looking pictures<br></p><p class="grey-text">Likes: cool evenings, video games.</p><div class="chip">#Photographer &nbsp;</div><div class="chip">#weddings &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/images%20(16).jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Amechi Eze</strong><br><span style="font-size: 13px;">Lawyer at Barnes &amp; Noble &#8226; <span class="grey-text">6 miles away</span></span></span> 
+                  <p>Called to bar in 2005, never lost a case since then.<br></p><p class="grey-text">Likes: poetry, children, politics.</p><div class="chip">#law &nbsp;</div><div class="chip">
+    #lawyer &nbsp;</div><div class="chip">#attorney &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/plumber1.jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Ejiro Emmanuel</strong><br><span style="font-size: 13px;">Plumber at ABC House Services &#8226; <span class="grey-text">42 miles away</span></span></span> 
+                  <p>No more leaks. Call on tbe best plumbers available - 070 1234 5678 <br></p><p class="grey-text">Likes: football, wrestling, Soap operas.</p><div class="chip">#plumbing &nbsp;</div><div class="chip">
+    #plumber &nbsp;</div><div class="chip">#pipes &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/images%20(17).jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Beyonce Knowles</strong><br><span style="font-size: 13px;">Musician at Jay Studios &#8226; <span class="grey-text">320 miles away</span></span></span> 
+                  <p>Professional MC and Radio &amp; TV Talk show Host. <br></p><p class="grey-text">Likes: conversation, fashion, scifi movies.</p><div class="chip">#music &nbsp;</div><div class="chip">
+    #performer &nbsp;</div><div class="chip">#art &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/images%20(11).jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Omotola Jalade</strong><br><span style="font-size: 13px;">Gynecologist at Abuja&#8226; <span class="grey-text">129 miles away</span></span></span> 
+                  <p>Women's Health is the health of the nation.<br></p><p class="grey-text">Likes: conversation, fashion, scifi movies.</p><div class="chip">#gynecologist &nbsp;</div><div class="chip">
+    #clinic &nbsp;</div><div class="chip">#womendoctor &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/images%20(14).jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Princess Chukwura</strong><br><span style="font-size: 13px;">Model at Jodella &#8226; <span class="grey-text">52 miles away</span></span></span> 
+                  <p>Professional runway and photoshoot model. <br></p><p class="grey-text">Likes: davido, ritz carlton, braids.</p><div class="chip">#fashion &nbsp;</div><div class="chip">
+    #runway &nbsp;</div><div class="chip">#model &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/LN-Winner-Peta-267x300.jpg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Chisum Iniedo</strong><br><span style="font-size: 13px;">Lawyer at Iyana Ipaja &#8226; <span class="grey-text">37 miles away</span></span></span> 
+                  <p>Contact me for good Legal Advice. <br></p><p class="grey-text">Likes: Suits, Versace, Xtian Movies.</p><div class="chip">#lawschool &nbsp;</div><div class="chip">
+    #calltobar &nbsp;</div><div class="chip">#lawyer &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/cartoontechy.jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Sean Banks</strong><br><span style="font-size: 13px;">Web Developer at Yaba &#8226; <span class="grey-text">17 miles away</span></span></span> 
+                  <p>Professional WebDeveloper/ Webprogrammer. You Imagine, i build. <br></p><p class="grey-text">Likes: eating, coding, video games..</p><div class="chip">#PHP &nbsp;</div><div class="chip">
+    #node.js &nbsp;</div><div class="chip">#webdev &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/casualman.jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Kunle Adeshina</strong><br><span style="font-size: 13px;">Dentist at Central Hospital &#8226; <span class="grey-text">35 miles away</span></span></span> 
+                  <p>We treat, but God heals. Contact for a dental appointment and orthodontist.<br></p><p class="grey-text">Likes: Discovery channel, sports, snacks..</p><div class="chip">#braces &nbsp;</div><div class="chip">
+    #booknow &nbsp;</div><div class="chip">#dentist &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left " style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div class="card hoverable" style="display:none; margin-bottom: 0px;" >
+                <div class="card-image" style="height:230px !important;">
+                  <img src="../assets/images/farmer.jpeg" style="height:230px !important;">
+					
+                  <a class="btn-floating blue add_contact btn-large halfway-fab waves-effect waves-light"><i class="fa fa-plus-circle fa-2x" data-fa-transform="down-4"></i></a>
+                </div>
+                <div class="card-content left-align" style="padding-bottom:1px">
+                       <span class="card-title left-align" style="font-weight: strong; line-height: 18px;"><strong>Jimoh Adedeji</strong><br><span style="font-size: 13px;">Farmer at Agidingbi &#8226; <span class="grey-text">70 miles away</span></span></span> 
+                  <p>Agriculture is the heart of our economy. Let's use it. <br></p><p class="grey-text">Likes: investing, learning, research.</p><div class="chip">#agric &nbsp;</div><div class="chip">
+    #poultry &nbsp;</div><div class="chip">#fishery &nbsp;</div>
+               <div class="row center" > <img id="switch" src="../assets/images/nearbyswipeleft.png" class="circle swipe_left" style="margin-right: 100px; width:50px;"> <img src="../assets/images/nearbyswiperight.png" class="circle swipe_right" style="width:50px;" onclick=""></div>
+                </div>
+              </div>
+              <div id="card_ender" class="card hoverable center" style="height:450px; margin-top: -10px; display:none;"><p class="flow-text grey-text" style="padding-top:30%;"><i class="fa fa-user-slash"></i> &nbsp;No More Users Nearby</p>
+               <i class="fa fa-frown grey-text fa-7x"></i>
+				  <p class="flow-text grey-text"><a href="#" id="retry"><span class="blue-text"><i class="fa fa-redo-alt"></i> Retry?</span></a> (Expand Search)</p>
+              
+              </div>
+              
+              <div id="card_loader" class="card hoverable center" style="height:450px; margin-top: -10px; display:none;"><p class="flow-text grey-text" style="padding-top:30%;"><i class="fa fa-search-plus"></i> &nbsp;Searching Nearby</p>
+               <i class="fa fa-spinner fa-pulse grey-text fa-10x"></i>
+                
+              
+              </div>
+              
+              <div id="first_card" class="card hoverable center" style="height:450px; margin-top: -0px;"><p class="grey-text" style="padding-top:10%; margin-bottom:0px; padding-left:20px; padding-right:20px;"> &nbsp;Search Nearby for doctors, lawyers, plumbers, mechanics, guitarists and all the awesome people around you... </p><br>
+              <div class="container"><div class="input-field">
+                               
+                                <input id="search2" type="search" class="validate">
+                                <label for="search2"> <i class="fa fa-search-plus"></i>&nbsp; Search Nearby</label>
+				  </div></div>
+               <i class="fa fa-users grey-text fa-7x"></i><br>
+              <p class="flow-text grey-text" style="margin-top:0px;">Or Find... <br>
+				  <a href="#" id="searchall"><span class="blue-text" style=" paddin-top: 0px; margin-top:-10px; margin-bottom: 0px;"><i class="fa fa-map-marker-alt"></i> Everyone Around me</span></a></p>
+              
+              </div>
+              
+              
+				  </div>
+				  </div></div>
+              <!-- <div id="container">
+                    <div class="buddy" style="display: block;"><div class="avatar"  style="display: block; background-image: url(https://1.bp.blogspot.com/_qEbjiFbQWGM/TCBVlN3mkYI/AAAAAAAADCM/7CjYqUHwbgY/s1600/workshop_modell_0126.jpg)"></div><h2>First LastName</h2><p>Some little gist about myself - Keep things Interesting</p></div>
+                    <div class="buddy"><div class="avatar" style="display: block; background-image: url(http://static.stylemagazin.hu/medias/29280/Nem-ehezik-a-Women-of-the-Year-legjobb-modell-dijara-eselyes-szepseg_32fc7c86954a8847610499a0fc7261e2.jpg)"></div><h2>Pretty LadyGirl</h2><p>Lorem is the normal gist that they use for these sort of things</p></div>  
+                    <div class="buddy"><div class="avatar" style="display: block; background-image: url(http://w1nd.cc/promo/347.jpg)"></div><h2>Lady Marmalade</h2><p>It will soon become obvious that I don't have what to write about these people</p></div>  
+                <div class="buddy"><div class="avatar" style="display: block; background-image: url(http://ell.h-cdn.co/assets/cm/15/01/54a769be3112d_-_elle-rata-insta-1-24375723.png)"></div><h2>Naiming Isharde</h2><p>At which point the messages become very jaded but arguably more interesting</p></div>  
+                    <div class="buddy"><div class="avatar" style="display: block; background-image: url(http://hircsarda.hu/wp-content/uploads/2016/03/orban1.jpeg)"></div><h2>Mr Trump Ally</h2><p>Fake news</p></div>  
+                  </div> -->
+          </div></div>
+          
+    <div id="test4" class="col s12 blue z-depth-0">
+     <div class="row">
+     <div class="col s12 m4 offset-m1 l5 offset-l1">
+      <div class="card-panel z-depth-1" style="padding-left: 0px; padding-right: 0px; padding-top: 2px; margin-top: 0px;">
+      <div class="container">
+      <div class="input-field">
+                               
+                                <input id="search3" type="search" class="validate">
+                                <label for="search3"> <i class="fa fa-search-plus"></i>&nbsp; Search Contacts</label>
+		  </div></div>
+       <iframe src="contact.html" frameborder="0" height="520px" width="100%" style="padding-bottom: 15px;" onclick="$('#chat_modal').modal('open');">
+		  </iframe></div>
+		 </div><div class="col s12 m4 offset-m1 l6">
+      <div class="card-panel z-depth-1" style="padding-left: 0px; margin-left:40px; margin-right:30px; padding-right: 0px; padding-top: 2px; margin-top: 0px;">
+      <div class="container">
+      <h5>Chat with <span class="blue-text">Chibuzor</span></h5></div>
+       <iframe src="contactchat.html" frameborder="0" height="350px" width="100%" style="padding-bottom: 15px;">
+		  </iframe>
+		  <div class="container" style="margin-top:-0px;"><div class="input-field"><input type="text" id="textarea1" class="">
+          <label for="textarea1">Chat Message</label></div>
+          <button id="message1" class="chat btn blue waves-effect waves-light" style="width:100%;">Send Message</button>
+		  </div>
+		  </div>
+		 </div></div></div>
+	   </main>
+	  <div id="chat_modal" class="modal" >
+	  <div class="modal-content"><h5>Chat with <span class="blue-text">Chibuzor</span></h5>
+	  <iframe src="contactchat.html" frameborder="0" height="250px" width="100%" style="padding-bottom: 0px;">
+		  </iframe>
+		  <div class="input-field"><input type="text" id="textarea2" class="">
+          <label for="textarea2">Chat Message</label></div>
+          <button id="message2" class="chat btn blue waves-effect waves-light" style="width:100%;">Send Message</button>
+		  
+	  </div>
+	  	
+	  </div>
+	  
+   <div id="login_modal" class="modal">
+    <form id="login_form">
+    <div class="modal-content center">
+    
+   
+		<div class="logincover" style="display:block; padding-bottom:4px;"> <!-- Login Form Begins Here--> 
+                           <form action="" id="loginform" submit="false">
+                            <div class="input-field">
+
+                                <input id="email2" type="email" name="email" required>
+                                <label for="email"><i class="fa fa-envelope"></i>&nbsp;Email &nbsp; <span id="lemail"></span><span class="grey-text" id="loader_logemail" style="display:none;"> Checking <i class="fas fa-spinner fa-pulse"></i></span><span class="grey-text" id="error_logemail" style="display:none;"> Connection Error <i class="fas fa-broadcast-tower"></i></span></label>
+                            </div>
+                            <div class="input-field">
+
+                                <input id="password" type="password" name="password" required>
+                                <label for="password"><i class="fa fa-lock"></i>&nbsp;Password &nbsp;<span id="lpassword"></span></label>
+                                
+                            </div>
+                            <div class="row" style="padding-bottom:5px; margin-top: -10px;" id="forgot_password1"></div>
+                      <div id="loader_login" style="display:none;"><p class="grey-text center ">Logging In</p><div class="progress">
+      <div class="indeterminate"></div>
+  </div></div>      <p class="grey-text center" id="error_login" style="display:none;">Connection Error <i class="fas fa-broadcast-tower"></i></p> 
+<!--
+                            <button class="btn blue waves-effect waves-light" type="button" name="" id="loginbtn" style="display:block; width:100%; border-radius: 20px;">Log in &nbsp; 
+    <i class="fa fa-power-off"></i>
+    </button>
+-->
+							   <hr>
+                        <p class="center" style="margin-top:-19px;"><span style="background-color:rgba(255,255,255,1); color:black; padding:5px;">OR</span></p>
+                        <div style="display: flex; padding-bottom:15px;">
+                            <a href="#modal4" class="btn red waves-effect waves-light modal-trigger" style="flex:1;">Sign in with google &nbsp; <i class="fab fa-google"></i></a>
+
+                        </div>
+                        <div style="display: flex; padding-bottom:0px;">
+                            <a href="#modal5" class="btn blue accent-2 waves-effect waves-light modal-trigger" style="flex:1;">Sign in with facebook &nbsp; <i class="fab fa-facebook" data-fa-transform="grow-3"></i></a>
+
+                        </div>
+
+                        </form>
+                          
+                           <a class="formsignup"><p class="center blue-text">Forgot Password &nbsp; <i class="fa fa-question-circle"></i></p></a>
+                           </div>
+  </div>
+      <div class="modal-footer center">
+      <a class="btn-flat blue-text modal-close waves-effect waves-blue" id="login_cancel" onclick="Materialize.toast('Login Cancelled', 1500);">Cancel </a>
+      <a type="submit" class="btn blue waves-effect waves-light" id="login_agree" style="border-radius: 20px;">Agree</a>
+    </div>
+        </form>
+  </div>
+  
+    <script src='../assets/js/jquery-3.2.1.min.js'></script>
+    <script src='../assets/js/materialize.min.js'></script>
+     <script type="text/javascript" src="../assets/fonts/svg-with-js/js/fontawesome-all.min.js"></script>
+    <script src="../assets/js/bottom_tabs.min.js"></script>
+    <script>
+		
+		$(document).ready(function(){
+			
+		function searchfirst(){
+			$('#first_card').hide();
+			$('#card_loader').show();
+			
+			setTimeout(function(){
+				$('#card_loader').hide();
+				$('#first_result').show();
+				$('#panel_search').show('slow');
+			}, 2000);
+		};	
+			$('.collapsible').collapsible();
+//			$('.tabs-content.carousel').style.height = window.innerHeight +"px";
+			$('.modal').modal();
+			$('.button-collapse').sideNav();
+			$('.tabs').tabs();
+			$('ul.tabs').tabs({
+				swipeable: true
+			});
+		
+	$(document).on('click', '.add_contact', function(){
+		
+		Materialize.toast('Contact Added', 1500);
+		$(this).parents('.hoverable').addClass('add-to-contact').fadeOut(500, function(){
+			$(this).hide;
+		}).next().fadeIn('slow');
+		
+	});
+	$(document).on('click','.swipe_right', function(){
+		Materialize.toast('View Later', 1500);
+		$(this).parents('.hoverable').addClass('swipe-right').fadeOut(500, function(){
+			$(this).hide();
+		}).next().fadeIn('slow');
+	});
+	$(document).on('click','.swipe_left',function(){
+		Materialize.toast('Not Interested', 1500);
+		$(this).parents('.hoverable').addClass('swipe-left').fadeOut(500, function(){
+			$(this).hide();
+		}).next().fadeIn('slow');
+	});
+	$(document).on('click','.chat',function(){
+		$('#textarea1').val('');
+		$('#textarea2').val('');
+		Materialize.toast('Message Sent', 1500);
+	});
+			
+	$("#searchall").click(function(){
+		searchfirst();
+	})
+	$("#retry").click(function(){
+		$("#card_ender").hide();
+		$('.hoverable').removeClass('add-to-contact').removeClass('swipe-right').removeClass('swipe-left');
+		searchfirst();
+		
+	});
+			
+	var input= $("#search");
+			
+			input.on("keyup", function(event){
+				event.preventDefault();
+				if (event.keyCode === 13){
+					var term = $('#search').val();
+					Materialize.toast('Searching nearby for '+ term, 1500);
+					searchfirst();
+				}
+			})
+			var input2= $("#textarea1");
+			input2.on("keyup", function(event){
+				event.preventDefault();
+				if (event.keyCode === 13){
+					$('#message1').click();
+				}
+			})
+			
+			var input4= $("#textarea2");
+			input4.on("keyup", function(event){
+				event.preventDefault();
+				if (event.keyCode === 13){
+					$('#message2').click();
+				}
+			})
+			
+			var input3= $("#search2");
+			input3.on("keyup", function(event){
+				event.preventDefault();
+				if (event.keyCode === 13){
+					var contact = $('#search2').val();
+					Materialize.toast('Searching nearby for '+ contact, 1500);
+					searchfirst();
+				}
+			})
+			
+		})
+		
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="jquery.mobile.custom.structure.min.css">
+    <link rel="stylesheet" href="jquery.mobile.custom.theme.min.css">
+    <style>
+    
+#container {
+  width: 500px;
+  margin: auto !important;
+  display: block;
+  height: 500px;
+  position: relative;
+  list-style-type: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.buddy {
+  display: none;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: #000;
+  padding: 20px;
+  width: 320px;
+  height: 420px;
+  top: 30px;
+  left: 0%;
+  position: absolute;
+  cursor: hand;
+}
+.rotate-left {
+  transform: rotate(30deg) scale(0.8);
+  transition: 1s;
+  margin-left: 400px;
+  cursor: e-resize;
+  opacity: 0;
+  z-index: 10;
+}
+.rotate-right {
+  transform: rotate(-30deg) scale(0.8);
+  transition: 1s;
+  opacity: 0;
+  margin-left: -400px;
+  cursor: w-resize;
+  z-index: 10;
+}
+.avatar {
+  background: #222;
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-size: auto 160% !important;
+  background-position: center;
+ background-repeat: no-repeat;
+}
+.like {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 2px solid green;
+  color: green;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  text-shadow: none;
+}
+.dislike {
+  border-radius: 5px;
+  padding: 5px 10px;
+  border: 2px solid red;
+  color: red;
+  text-transform: uppercase;
+  font-size: 15px;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+  text-shadow: none;
+}
+    </style>
+    <title>Document</title>
+    <!-- <script src="jquery3.js"></script> -->
+    <script src="jquery1.js"></script>
+    <script src="jquery12.js"></script>
+    <!-- <script src="jquery.mobile.custom.min.js"></script> -->
+</head>
+
+<body>
+        <div id="container">
+          <div class="buddy" style="display: block;"><div class="avatar"  style="display: block; background-image: url(https://1.bp.blogspot.com/_qEbjiFbQWGM/TCBVlN3mkYI/AAAAAAAADCM/7CjYqUHwbgY/s1600/workshop_modell_0126.jpg)"></div><h2>First LastName</h2><p>Some little gist about myself - Keep things Interesting</p></div>
+          <div class="buddy"><div class="avatar" style="display: block; background-image: url(http://static.stylemagazin.hu/medias/29280/Nem-ehezik-a-Women-of-the-Year-legjobb-modell-dijara-eselyes-szepseg_32fc7c86954a8847610499a0fc7261e2.jpg)"></div><h2>Pretty LadyGirl</h2><p>Lorem is the normal gist that they use for these sort of things</p></div>  
+          <div class="buddy"><div class="avatar" style="display: block; background-image: url(http://w1nd.cc/promo/347.jpg)"></div><h2>Lady Marmalade</h2><p>It will soon become obvious that I don't have what to write about these people</p></div>  
+      <div class="buddy"><div class="avatar" style="display: block; background-image: url(http://ell.h-cdn.co/assets/cm/15/01/54a769be3112d_-_elle-rata-insta-1-24375723.png)"></div><h2>Naiming Isharde</h2><p>At which point the messages become very jaded but arguably more interesting</p></div>  
+          <div class="buddy"><div class="avatar" style="display: block; background-image: url(http://hircsarda.hu/wp-content/uploads/2016/03/orban1.jpeg)"></div><h2>Mr Trump Ally</h2><p>Fake news</p></div>  
+        </div>
+      
+    <script>
+    $(document).ready(function(){
+
+$(".buddy").on("swiperight",function(){
+  $(this).addClass('rotate-left').delay(700).fadeOut(1);
+  $('.buddy').find('.status').remove();
+
+  $(this).append('<div class="status like">Like!</div>');      
+  if ( $(this).is(':last-child') ) {
+    $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
+   } else {
+      $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
+   }
+});  
+
+$(".buddy").on("swipeleft",function(){
+$(this).addClass('rotate-right').delay(700).fadeOut(1);
+$('.buddy').find('.status').remove();
+$(this).append('<div class="status dislike">Dislike!</div>');
+
+if ( $(this).is(':last-child') ) {
+ $('.buddy:nth-child(1)').removeClass ('rotate-left rotate-right').fadeIn(300);
+  
+ } else {
+    $(this).next().removeClass('rotate-left rotate-right').fadeIn(400);
+} 
+});
+
+});
+    </script>
+</body>
+</html>

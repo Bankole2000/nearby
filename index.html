@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="assets/fonts/css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="assets/fonts/svg-with-js/css/fa-svg-with-js.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="assets/css/prism.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize-stepper.min.css" media="screen,projection" />
+  <link sizes="192x192" rel="icon" href="assets/images/nearbyicon.png" />
+<!--  <link type="text/css" rel="stylesheet" href="assets/css/main.css" media="screen,projection" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>Nearby</title>
+  <style>
+	
+	  .overlay{
+		  background-color: rgba(0,0,0,0.3); background-size:cover; height: 100%; padding-top: 10px; 
+	  } 
+	</style>
+  
+</head>
+
+<body>
+ <div class="navbar-fixed">
+ 	<nav class="white ">
+ 		<div>
+ 			<div class="nav-wrapper"><div class="container"><a data-activates="sidemenu" data-position="right" class="btn z-depth-0 white button-collapse show-on-small transparent">
+                <i class="left fas fa-bars black-text show-on-small" data-fa-transform="down-25 grow-5"></i>
+                </a><a href="index.php" class="brand-logo"><img src="assets/images/nearby.png" alt="" style="height: 50px; margin-top:10px; padding-bottom: 10px;"></a>
+ 			<ul class="right hide-on-med-and-down">
+        <li><a class="black-text" href="sass.html"><i class="fa fa-search-plus" data-fa-transform="10"></i> SEARCH</a></li>
+        <li><a class="black-text" href="badges.html"><i class="fa fa-user-plus"></i> ADD</a></li>
+        <li><a class="black-text" href="collapsible.html"><i class="fab fa-whatsapp"></i> CHAT</a></li>
+        
+        <li><a class="white-text btn blue waves-effect waves-light modal-trigger" data-target="login_modal" style="border-radius: 20px;"><i class="fa fa-sign-in-alt"></i> Login</a></li>
+				</ul></div></div>
+ 		</div>
+ 	</nav>
+ </div>
+ 
+ <ul id="sidemenu" class="side-nav white lighten-4">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="assets/images/29.jpg" style="width:600px;" alt="">
+                </div>
+                <a href="profile.php"><img src="assets/images/nearbyicon.png" class="circle" alt=""></a>
+                <a href="profile.php"><span class="name white-text">NearBy</span></a>
+                <a href="profile.php"><span class="email white-text">info@nearby.com</span></a>
+
+            </div>
+        </li>
+        <li>
+            <a class="active subheader">
+                <div>Find the People You Need</div>
+            </a>
+
+
+        </li>
+       <li><a class="black-text" href="sass.html"><i class="fa fa-search-plus" data-fa-transform="grow-10"></i> &nbsp; Search</a></li>
+        
+       
+
+        <div class="divider"></div>
+        <li>
+            <a class="active subheader">
+                <div>Make New Contacts</div>
+            </a>
+
+
+        </li>
+        <li class="no-padding">
+            <ul class="collapsible collapsible-accordion">
+                <li>
+                    <a class="collapsible-header">
+                        <div><i class="colortextbrand fas fa-address-card" data-fa-transform=""></i>&nbsp; &nbsp; My Contacts &nbsp; &nbsp; <i class="fa fa-caret-down"></i></div>
+                    </a>
+                    <div class="collapsible-body">
+                        <ul>
+                             <li><a class="black-text" href="badges.html"><i class="fa fa-user-plus" data-fa-transform=""></i>&nbsp; Add Contact</a></li>
+                            
+                            <li><a class="black-text" href="collapsible.html"><i class="fab fa-whatsapp" data-fa-transform=""></i>  &nbsp; Chat</a></li>
+                            
+                             <li><a class="black-text" href="badges.html"><i class="fa fa-user-minus" data-fa-transform=""></i>&nbsp; Delete Contact</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+
+
+        </li>
+
+
+        <div class="divider"></div>
+        <li>
+            <a class="subheader">
+                <div>Get Started</div>
+            </a>
+        </li>
+       
+        <li><a class="black-text signup"><i class="fa fa-paper-plane" data-fa-transform="grow-3" ></i>&nbsp; Sign Up</a></li>
+        <li><a class="black-text modal-trigger" data-target="login_modal"><i class="fa fa-sign-in-alt"  data-fa-transform="grow-3"></i>&nbsp; Login</a></li>
+        
+       
+
+    </ul>
+ 
+    <div class="carousel carousel-slider center" style="height: 560px;">
+      <div class="carousel-fixed-item center">
+        <a class="btn waves-effect white blue-text modal-trigger signup" ><i class="fa fa-paper-plane"></i> Sign up</a>
+      </div>
+      <div class="carousel-item white-text" href="#one!" style="background-image:url(assets/images/neighbourhood2.jpeg); background-size:cover; background-position: center center;"><div class="overlay">
+        <h1 style="font-size: 35px;">Welcome to Nearby</h1>
+        <p class="white-text flow-text" style="font-size: 20px;">Because the things you need <br> <i>Are never far away...</i></p>
+		  </div></div>
+      <div class="carousel-item white-text" href="#one!" style="background-image:url(assets/images/locationblacklady.jpeg); background-size:cover; background-position: center center;"><div class="overlay">
+        <h2 style="font-size: 35px;"><i class="fa fa-map-marker-alt" ></i> Search</h2>
+        <p class="white-text flow-text" style="font-size: 20px;">Find just the right people <br> <i>Right around the corner...</i></p>
+		  </div></div>
+      <div class="carousel-item amber white-text" href="#two!" style="background-image:url(assets/images/chatmobile.jpeg); background-size:cover; background-position: center center;"><div class="overlay">
+        <h2 style="font-size: 35px;"><i class="fa fa-address-card" ></i> Add Contacts</h2>
+        <p class="white-text flow-text" style="font-size: 20px;"> Grow Your Network <br><i>And have a guy (or girl) for everything...</i></p>
+		  </div></div>
+      <div class="carousel-item green white-text" href="#three!" style="background-image:url(assets/images/contactmeet2.jpeg); background-size:cover; background-position: center center;">
+       <div class="overlay"> <h1 style="font-size: 35px;"><i class="fab fa-whatsapp" ></i> Talk Business</h1>
+        <p class="white-text flow-text" style="font-size: 20px;">Search based on Skills, Occupation<br> <i>And Connect with Professionals...</i></p>
+		  </div></div>
+      <div class="carousel-item blue white-text" href="#four!" style="background-image:url(assets/images/pexels-photo-567636.jpeg); background-size:cover; background-position: top center;">
+       <div class="overlay"> <h1 style="font-size: 35px;"><i class="fab fa-whatsapp" ></i> Or Pleasure</h1>
+        <p class="white-text flow-text" style="font-size: 20px;">Search based on hobbies, interests <br> <i>And Make new friends...</i></p>
+		  </div></div>
+      <div class="carousel-item blue white-text" href="#four!" style="background-image:url(assets/images/neighbourhood.jpeg); background-size:cover; background-position: center center;">
+       <div class="overlay"> <h1 style="font-size: 35px;"><i class="fa fa-home" ></i> Own the Neighbourhood</h1>
+        <p class="white-text flow-text" style="font-size: 20px;">Never be a stranger <br> <i>To the place you call home...</i></p>
+		  </div></div>
+    </div>
+	<section><div class="row"><div class="container"><div class="col s12 m6 l6"><p class="flow-text">Presentation</p><div class="video-container z-depth-1"><iframe width="853" height="480" src="//www.youtube.com/embed/g0B4Pypzjjo?rel=0" frameborder="0" allowfullscreen></iframe></div></div><div class="col s12 m6 l6"><p class="flow-text" style="margin-bottom: 0px;">Project Notes</p><ol><li><i class="fa fa-info-circle"></i>&nbsp; The <strong class="blue-text">Nearby</strong> Project still <strong class="red-text text-lighten-1">IN DEVELOPMENT</strong>. This is a <i><b class="orange-text text-lighten-2">Static HTML/Javascript Demo</b> </i> to illustrate what the app would be like when complete. To view the demo, click <strong class="blue-text">LOGIN</strong>, then <strong class="blue-text">AGREE</strong> on the modal that appears (no login details required).</li><li>Production App uses <i class="orange-text text-lighten-2" style="font-weight: bold;">geolocation</i> to search for other users in the vicinity.</li><li>Users are indexed using <i class="orange-text text-lighten-2" style="font-weight: bold;">user-entered Profile Data, Current Physical Location, </i>and <i class="orange-text text-lighten-2" style="font-weight: bold;">user-defined searchable tags </i></li><li>Search Using Occupation, skills or services to <strong class="blue-text">Find Colleagues, clients, or professionals around you whose services you may need (e.g. plumbers, electricians, lawyers, doctors etc).</strong></li><li>Search Using Interests, hobbies etc to <strong class="blue-text">Find users around you with similar interests and make friends or casual acquiantances.</strong></li> <li>Add Search results to nearby Contacts and Chat/Send messages.</li><li>Final App will be either Native Mobile app, Hybrid App or PWA (Progressive Web App).</li></ol></div></div></div></section>
+<!--
+  <p class="flow-text">Tetle</p>
+  <section>
+    <div class="row">
+      <div class="col s12">This div is 12-columns wide on all screen sizes</div>
+      <div class="col s6">6-columns (one-half)</div>
+      <div class="col s6">6-columns (one-half)</div>
+    </div>
+    <div class="carousel carousel-slider center">
+      <div class="carousel-fixed-item center">
+        <a class="btn waves-effect white grey-text darken-text-2">button</a>
+      </div>
+      <div class="carousel-item red white-text" href="#one!">
+        <h2>First Panel</h2>
+        <p class="white-text">This is your first panel</p>
+      </div>
+      <div class="carousel-item amber white-text" href="#two!">
+        <h2>Second Panel</h2>
+        <p class="white-text">This is your second panel</p>
+      </div>
+      <div class="carousel-item green white-text" href="#three!">
+        <h2>Third Panel</h2>
+        <p class="white-text">This is your third panel</p>
+      </div>
+      <div class="carousel-item blue white-text" href="#four!">
+        <h2>Fourth Panel</h2>
+        <p class="white-text">This is your fourth panel</p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="col s12">
+      <div class="card">
+        <div class="card-content">
+          <ul class="stepper horizontal" id="horizontal">
+            <li class="step active">
+              <div data-step-label="To step-title!" class="step-title waves-effect waves-dark">Step 1</div>
+              <div class="step-content">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input name="email" type="email" class="validate" required>
+                    <label for="email">Your e-mail</label>
+                  </div>
+                </div>
+                <div class="step-actions">
+                  <button class="waves-effect waves-dark btn blue next-step">CONTINUE</button>
+                </div>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-title waves-effect waves-dark">Step 2</div>
+              <div class="step-content">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id name="password" type="password" class="validate" required>
+                    <label for="password">Your password</label>
+                  </div>
+                </div>
+                <div class="step-actions">
+                  <button class="waves-effect waves-dark btn blue next-step" data-feedback="someFunction">CONTINUE</button>
+                  <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
+                </div>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-title waves-effect waves-dark">Step 3</div>
+              <div class="step-content">
+                Finish!
+                <div class="step-actions">
+                  <button class="waves-effect waves-dark btn blue" type="submit">SUBMIT</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+-->
+  
+  <footer class="page-footer"  style="background-image:url(assets/images/29.jpg);  background-size:cover; padding-top:0px; padding-bottom:0px;">
+       <div class="overlay" style="margin-top:0px; margin-bottom: 0px; padding-top:25px; padding-bottom:25px;">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">About Nearby</h5>
+					<p class="grey-text text-lighten-4">Nearby is An application that helps you Discover and Connect with People and Business around you. <br> <strong class="yellow-text">Application is still under development. This website is just a mockup demo created for Presentation purposes. <br><a href="https://youtu.be/g0B4Pypzjjo" class="cyan-text">View demo video</a></strong></p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Nearby Support</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="news.php">News and Updates</a></li>
+                        <li><a class="grey-text text-lighten-3" href="support.php">Contact Us</a></li>
+                        <li><a class="grey-text text-lighten-3">Privacy Policy</a></li>
+                        <li><a class="grey-text text-lighten-3">Terms and Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+		   </div></div>
+        <div class="footer-copyright black">
+            <div class="container">
+                © 2018 Copyright - <a href="index.php"><strong>Nearby</strong></a>
+                <a class="right"><i class="white-text fab fa-facebook-square fa-fw fa-lg" data-fa-transform="up-1"></i><i class="white-text fab fa-instagram fa-fw fa-lg" data-fa-transform="up-1"></i><i class="white-text fab fa-twitter fa-fw fa-lg" data-fa-transform="up-1"></i></a>
+            </div>
+        </div>
+    </footer>
+  
+  
+   <div id="login_modal" class="modal">
+    <form id="login_form">
+    <div class="modal-content center">
+    <h4 class="colortextbrand"><img src="assets/images/nearbyicon.png" style="width: 30px;" alt=""> Login</h4>
+   
+		<div class="logincover" style="display:block; padding-bottom:4px;"> <!-- Login Form Begins Here--> 
+                           <form action="" id="loginform" submit="false">
+                            <div class="input-field">
+
+                                <input id="email2" type="email" name="email" required>
+                                <label for="email"><i class="fa fa-envelope"></i>&nbsp;Email &nbsp; <span id="lemail"></span><span class="grey-text" id="loader_logemail" style="display:none;"> Checking <i class="fas fa-spinner fa-pulse"></i></span><span class="grey-text" id="error_logemail" style="display:none;"> Connection Error <i class="fas fa-broadcast-tower"></i></span></label>
+                            </div>
+                            <div class="input-field">
+
+                                <input id="password" type="password" name="password" required>
+                                <label for="password"><i class="fa fa-lock"></i>&nbsp;Password &nbsp;<span id="lpassword"></span></label>
+                                
+                            </div>
+                            <div class="row" style="padding-bottom:5px; margin-top: -10px;" id="forgot_password1"></div>
+                      <div id="loader_login" style="display:none;"><p class="grey-text center ">Logging In</p><div class="progress">
+      <div class="indeterminate"></div>
+  </div></div>      <p class="grey-text center" id="error_login" style="display:none;">Connection Error <i class="fas fa-broadcast-tower"></i></p> 
+<!--
+                            <button class="btn blue waves-effect waves-light" type="button" name="" id="loginbtn" style="display:block; width:100%; border-radius: 20px;">Log in &nbsp; 
+    <i class="fa fa-power-off"></i>
+    </button>
+-->
+							   <hr>
+                        <p class="center" style="margin-top:-19px;"><span style="background-color:rgba(255,255,255,1); color:black; padding:5px;">OR</span></p>
+                        <div style="display: flex; padding-bottom:15px;">
+                            <a href="#modal4" class="btn red waves-effect waves-light modal-trigger" style="flex:1;">Sign in with google &nbsp; <i class="fab fa-google"></i></a>
+
+                        </div>
+                        <div style="display: flex; padding-bottom:0px;">
+                            <a href="#modal5" class="btn blue accent-2 waves-effect waves-light modal-trigger" style="flex:1;">Sign in with facebook &nbsp; <i class="fab fa-facebook" data-fa-transform="grow-3"></i></a>
+
+                        </div>
+
+                        </form>
+                          
+                           <a class="formsignup"><p class="center blue-text">Forgot Password &nbsp; <i class="fa fa-question-circle"></i></p></a>
+                           </div>
+  </div>
+      <div class="modal-footer center">
+      <a class="btn-flat blue-text modal-close waves-effect waves-blue" id="login_cancel" onclick="Materialize.toast('Login Cancelled', 1500);">Cancel </a>
+      <a type="submit" class="btn blue waves-effect waves-light" id="login_agree" style="border-radius: 20px;">Agree</a>
+    </div>
+        </form>
+  </div>
+  
+  <div id="signup_modal" class="modal">
+  	<div class="modal-content center">
+  		<h4 class="colortextbrand"><img src="assets/images/nearbyicon.png" style="width: 30px;" alt=""> Sign Up</h4>
+  		<ul class="stepper horizontal" id="horizontal">
+            <li class="step active">
+              <div data-step-label="To step-title!" class="step-title waves-effect waves-dark">Step 1</div>
+              <div class="step-content">
+               <div class="input-field" style="display:flex;">
+
+                               <div class="input-field" style="flex:20;">
+
+                                <input id="firstname" type="text" name="firstname" required>
+                                <label for="firstname"><i class="fa fa-user" data-fa-transform="left-5"></i>FirstName <span class="red-text" id="fname"></span></label>
+                                
+                            </div> 
+                            <div class="input-field" style="flex:18;">
+
+                                <input id="surname" type="text" name="surname" required>
+                                <label for="surname"><i class="fa fa-user" data-fa-transform="left-5"></i>Surname <span class="red-text" id="sname"></span></label>
+                                
+                            </div> 
+                            </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input name="email" type="email" class="validate" required>
+                    <label for="email">Your e-mail</label>
+                  </div>
+                </div>
+                <div class="step-actions">
+                  <button class="waves-effect waves-dark btn blue next-step disabled" id="signup_email">CONTINUE</button>
+                </div>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-title waves-effect waves-dark">Step 2</div>
+              <div class="step-content">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id name="password" type="password" class="validate" required>
+                    <label for="password">Your password</label>
+                  </div>
+                </div>
+                <div class="step-actions">
+                  <button class="waves-effect waves-dark btn blue next-step" data-feedback="someFunction">CONTINUE</button>
+                  <button class="waves-effect waves-dark btn-flat previous-step">BACK</button>
+                </div>
+              </div>
+            </li>
+            <li class="step">
+              <div class="step-title waves-effect waves-dark">Step 3</div>
+              <div class="step-content">
+                Finish!
+                <div class="step-actions">
+                  <button class="waves-effect waves-dark btn blue" type="submit">SUBMIT</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+  	</div>
+  </div>
+  
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/jquery3.js"></script>
+  <script src="assets/js/materialize.min.js"></script>
+  <script src="assets/js/materialize-stepper.min.js"></script>
+  <script type="text/javascript" src="assets/fonts/svg-with-js/js/fontawesome-all.min.js"></script>
+  <!-- <script src="assets/js/prism.js"></script> -->
+  <script>
+	  $(document).ready(function(){
+		  
+	function myLocation(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }else{
+        $('#myloc').html("Sorry, couldn't get locaion");
+    }
+}	  
+		  function showPosition(position){
+    $('#myloc').html('Longitude: ' + position.coords.longitude + '<br>Latitude: ' + position.coords.latitude + '<br>');
+}
+		  
+	  $('.carousel.carousel-slider').carousel({
+      fullWidth: true,
+      indicators: true,
+		  duration: 200
+	
+    });
+	setTimeout(autoplay, 5000);
+		  function autoplay(){
+			  $('.carousel').carousel('next');
+			  setTimeout(autoplay, 5000);
+		  }
+		  
+	  $('.button-collapse').sideNav();
+		    $('.modal').modal();
+
+    $('.stepper').activateStepper(); 
+	  
+	$(document).on('click','.signup', function(){
+		$('#signup_modal').modal('open');
+	})	  
+		  
+	
+		  
+	$('#login_agree').click(function(){
+		myLocation();
+		var email = $('#login_email').val();
+		var password = $("#login_password").val();
+		Materialize.toast('login successful', 2000, 'rounded', function(){
+			Materialize.toast('moving to app page', 1500,'rounded', function(){
+				window.location.replace('app/index.html');
+			});
+		})
+	//	var email_reg = ;
+		var action ="login";
+//		$.ajax({
+//			url: 'ajax/login.php',
+//			method: 'POST',
+//			dataType: 'json',
+//			data: {
+//				action: action, 
+//				email: email, 
+//				password: password, 
+//				
+//			}
+//			
+//			
+//			
+//		})
+		
+		
+	})	  
+	  
+	  })</script>
+
+</body>
+
+</html>

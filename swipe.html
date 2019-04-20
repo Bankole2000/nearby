@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <style>
+    body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.user-card {
+
+    max-width: 500px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    box-shadow: 0px 2px 5px 0px #ccc;
+    position: absolute; 
+    top: 100px;
+    left: 10%;
+}
+button{
+  position: relative; 
+    top: 100px;
+    left: 10%;
+}
+.user-card__picture {
+    width: 100%;
+    display: block;
+}
+
+.user-card__name {
+    margin-bottom: 0;
+    margin-top: 8px;
+}
+@keyframes swipe-left {
+    to {
+        transform: rotate(-13deg) translate3d(-100%, 0, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes swipe-right {
+    to {
+        transform: rotate(13deg) translate3d(100%, 0, 0);
+        opacity: 0;
+    }
+}
+.swipe-left {
+    animation: swipe-left 1s forwards;
+}
+
+.swipe-right {
+    animation: swipe-right 1s forwards;
+}
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="view"></div>
+    <button onclick="swipe_left()">Swipe Left</button>
+    <button onclick="swipe_right()">Swipe Right</button>
+    <script type="text/javascript" src="jquery3.js"></script>
+    <script>
+      function swipe_left(){
+        $('.view').addClass('swipe-left');
+        setTimeout(function(){
+          getPerson();
+        }, 100);
+      }
+
+      function swipe_right(){
+        $('.view').addClass('swipe-right');
+        setTimeout(function(){         
+          getPerson();
+        }, 100);
+        
+      }
+
+      var view = $(".view");
+      function getPerson(cb){
+        var url = "https://randomuser.me/api/?gender=female";
+        $.ajax({
+          url : url,
+          method : 'GET',
+          dataType : 'json',
+          success : function(response){
+            $('.view').removeClass('swipe-left');
+            $('.view').removeClass('swipe-right');
+          console.log(response.results[0]);
+          var user = response.results[0];
+          console.log(user.gender);
+         let html = `<div class="user-card"><img class="user-card__picture" src="${user.picture.large}"><h1 class="user-card__name">${user.name.first} ${user.name.last}</h1></div>`
+          view.html(html);
+          },
+        })
+      }
+      // var $VIEW = document.querySelector('.view');
+      // function getPerson(cb){
+      // var url = "https://randomuser.me/api/?gender=female";
+
+      // var oReq = new XMLHttpRequest();
+      //   oReq.addEventListener('load', function(){
+      //       var data = JSON.parse(this.responseText);
+      //       data = data.results[0].user;
+
+      //       var html = '<div class="user-card"><img class="user-card__picture" src="'+data.picture.large+'"></img><h1 class="user-card__name">'+data.name.first+' '+data.name.last+'</h1></div>';
+      //       $VIEW.innerHTML = html;
+      //   });
+      //   oReq.open("get", url, true);
+      //   oReq.send();
+      //   console.log(data);
+      // }
+
+      getPerson();
+    </script>
+</body>
+</html>
